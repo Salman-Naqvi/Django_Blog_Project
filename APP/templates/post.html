@@ -4,22 +4,15 @@
         <title>WesTech</title>
     </head>
     <body>
-        <header>
-            <h1><a href="/">Sleep Detection and Alert System</a></h1>
-        </header>
-
-        <article>
-            <time>Published Date: 3/7/2023</time>
-            <h2><a href="">Introduction</a></h2>
-            <p>The Sleep Detection and Alert System is an innovative project aimed at preventing accidents caused by drowsy driving. This system uses advanced sensors and algorithms to detect when a driver is falling asleep and alerts them to prevent accidents.
-            </p>
-        </article>
-
-        <article>
-            <time>Published Date: 3/7/2023</time>
-            <h2><a href="">Objective</a></h2>
-            <p>The primary objective of this project is to reduce the number of accidents caused by drowsy driving. By detecting when a driver is becoming drowsy and alerting them, the Sleep Detection and Alert System can prevent accidents and save lives.
-            </p>
+        <strong>WesTech</strong>
+        <div></div>
+            {% for post in posts %}
+                <article>
+                    <time>published: {{ post.published_date }}</time>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </article>
+            {% endfor %}
         </article>
     </body>
 </html>
